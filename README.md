@@ -2,6 +2,7 @@
 # Robomaster RM3508转接板程序开源
 ### 欢迎关注ACTION实验室！
 ### 诚邀招商！
+### 欢迎star!
 ### B站账号：东北大学Action实验室
 ### 微信公众号：ACTION机器人实验室
 
