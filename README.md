@@ -58,4 +58,6 @@ for(int i = 0; i < 8; i++)
 
 #### 欢迎在issue中提出任何问题。
 
+#### 本项目使用MIT开源协议（详见LICENSE），严禁商用
+
 参考链接： [RM3508/C620 官方手册与demo](https://www.robomaster.com/zh-CN/products/components/general/M3508?position=download#download)
