@@ -7,7 +7,8 @@
 ### 微信公众号：ACTION机器人实验室
 
 #### 本开源项目，通过CAN协议与C620电调进行通信，进而控制RM3508电机。
-#### 硬件环境：stm32单片机和CAN芯片/C620电调/RM3508电机；请见图片
+#### 硬件环境：stm32单片机和CAN芯片/C620电调/RM3508电机
+![image]https://github.com/NEUACTION/rm3508_can_opensource/blob/master/image/IMG_20190814_175125.jpg
 
 
 #### 其中包含了控制代码与CAN转接板原理图，仅供参考。
