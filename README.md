@@ -2,16 +2,29 @@
 # Robomaster RM3508转接板程序开源
 ### 欢迎关注ACTION实验室！
 ### 诚邀招商！
+![image](https://github.com/NEUACTION/rm3508_can_opensource/blob/master/image/ACTION%E5%B8%A6%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
 ### 欢迎star!
 ### B站账号：东北大学Action实验室
 ### 微信公众号：ACTION机器人实验室
 
+### 工作模式：
+#### 3508电机速度闭环 （Driver[i].unitMode = SPEED_CONTROL_MODE;）
+#### 3508电机位置闭环 （Driver[i].unitMode = POSITION_CONTROL_MODE;）
+#### 3508位置环零点标定 （Driver[i].unitMode = HOMING_MODE;）
+
+### 控制器：
+#### 位置-速度双闭环串极PID控制器
+#### 速度斜坡输入
+#### 速度环死区
+#### 位置环死区
+
 #### 本开源项目，通过CAN协议与C620电调进行通信，进而控制RM3508电机。
-#### 硬件环境：stm32单片机和CAN芯片/C620电调/RM3508电机；请见图片
+#### 硬件环境：stm32单片机和CAN芯片/C620电调/RM3508电机
+![image](https://github.com/NEUACTION/rm3508_can_opensource/blob/master/image/IMG_20190814_175125.jpg)
 
 
 #### 其中包含了控制代码与CAN转接板原理图，仅供参考。
-#### 本开源项目所有权归东北大学ACTION实验室所有。
+#### 本开源项目归东北大学ACTION实验室所有。
 
 #### 仓库使用方法：
 >* 克隆仓库
@@ -54,6 +67,9 @@ for(int i = 0; i < 8; i++)
 	}
 ```
 
+
 #### 欢迎在issue中提出任何问题。
+
+#### 本项目使用Apache License 2.0开源协议（详见LICENSE），商用之前，请先联系作者。
 
 参考链接： [RM3508/C620 官方手册与demo](https://www.robomaster.com/zh-CN/products/components/general/M3508?position=download#download)
