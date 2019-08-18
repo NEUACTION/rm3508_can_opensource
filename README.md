@@ -19,7 +19,13 @@
 #### 位置环死区
 
 #### 本开源项目，通过CAN协议与C620电调进行通信，进而控制RM3508电机。
-#### 硬件环境：stm32单片机和CAN芯片/C620电调/RM3508电机
+#### 硬件环境：stm32F405单片机和CAN芯片/C620电调/RM3508电机
+
+其中，使用CAN2连接C620电调CAN接口，CAN1跟主控通信
+
+控制周期：速度环：1ms，位置环：1ms
+
+
 ![image](https://github.com/NEUACTION/rm3508_can_opensource/blob/master/image/IMG_20190814_175125.jpg)
 
 
@@ -71,5 +77,18 @@ for(int i = 0; i < 8; i++)
 #### 欢迎在issue中提出任何问题。
 
 #### 本项目使用Apache License 2.0开源协议（详见LICENSE），商用之前，请先联系作者。
+
+
+### 关于直接跟使用CAN转接板：
+
+#### 硬件
+相应的电子元器件，可以直接查看该板子的原理图和PCB图
+##### 懒人模式：如果懒到不想看原理图的，有需要电子元件清单的，请直接联系微信号：wxid_6inww79395dy22
+
+#### 软件
+请参考在Action_User文件夹下的elmo.h文件，这里面包含了你们可能使用到的一些命令
+##### 懒人模式：不想看elmo.h，或者不愿意自己重写通信协议的，在确保CAN1和CAN2连接正常的情况下，在主控测发送VelCtrl(CANx,8192*10)，这样3508应当以10rps的速度旋转。
+
+##### 有问题请移步到issue提出
 
 参考链接： [RM3508/C620 官方手册与demo](https://www.robomaster.com/zh-CN/products/components/general/M3508?position=download#download)
