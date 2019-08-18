@@ -44,7 +44,6 @@
 #include "stm32f4xx_dma.h"
 #include "gpio.h"
 #include "stm32f4xx_exti.h"
-#include "elmo.h"
 
 /* Includes ------------------------------------------------------------------*/
 

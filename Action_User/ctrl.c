@@ -12,7 +12,6 @@
 #include "math.h"
 #include "rm_motor.h"
 #include "usart.h"
-#include "elmo.h"
 #include "comm.h"
 #include "timer.h"
 
@@ -68,28 +67,6 @@ void DriverInit(void)
 			Driver[i].posCtrl.posVel = 50.0f;
 			Driver[i].homingMode.vel = -160.0f;
 
-		}
-		else if(Motor[i].type == M_2006)  //M2006µÄ²ÎÊý
-		{
-		//	Driver[i].unitMode = HOMING_MODE;
-		//  Driver[i].unitMode = POSITION_CONTROL_MODE;
-		//  Driver[i].unitMode = SPEED_CONTROL_MODE;
-			
-			Driver[i].velCtrl.kp = VEL_KP_2006;
-			Driver[i].velCtrl.ki = VEL_KI_2006;
-			Driver[i].velCtrl.maxOutput = CURRENT_MAX_2006;		
-			Driver[i].velCtrl.desiredVel[MAX_V] = VEL_MAX_2006;
-			Driver[i].posCtrl.kd = POS_KD_2006;
-			Driver[i].posCtrl.kp = POS_KP_2006;
-			Driver[i].homingMode.current = 2.8f;
-			
-			Driver[i].velCtrl.acc = 1.0f;
-			Driver[i].velCtrl.dec = 1.0f;
-			Driver[i].velCtrl.desiredVel[CMD] = 250.0f;
-			Driver[i].posCtrl.desiredPos = 0.0f;
-			Driver[i].posCtrl.acc = 0.7f*Driver[i].velCtrl.dec;
-			Driver[i].posCtrl.posVel = 250.0f;
-			Driver[i].homingMode.vel = -160.0f;
 		}
 		else
 		{
